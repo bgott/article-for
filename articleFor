@@ -9,9 +9,7 @@
 
 function isVowel(char) {
     const vowels = "aeiou";
-    if (char.length === 1) {
-        return vowels.indexOf(char) >= 0 ? true : false;
-    }
+    return char.length === 1 && vowels.indexOf(char) >= 0;
 }
 
 function articleFor(str) {
