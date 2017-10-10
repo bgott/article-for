@@ -7,13 +7,13 @@
  * (NOT based on the pronunciation).
  */
 
-function isVowel(char) {
-    const vowels = "aeiou";
+isVowel = function(char) {
+    const vowels = 'aeiou';
     return char.length === 1 && vowels.indexOf(char) >= 0;
 }
 
-function articleFor(str) {
-    return (isVowel(str.charAt(0).toLowerCase())) ? "an" : "a";
+articleFor = function(str) {
+    return (isVowel(str.charAt(0).toLowerCase())) ? 'an' : 'a';
 }
 
 /* Testing. Reads strings from command line input */
