@@ -1,0 +1,25 @@
+/*
+ * Basic article selection: "a" vs "an".
+ *
+ * Takes in @string:parameter and returns the
+ * corresponding article. Note: article return is
+ * based solely on the first letter of the string
+ * (NOT based on the pronunciation).
+ */
+
+function isVowel(char) {
+    const vowels = "aeiou";
+    if (char.length === 1) {
+        return vowels.indexOf(char) >= 0 ? true : false;
+    }
+}
+
+function articleFor(str) {
+    return (isVowel(str.charAt(0).toLowerCase())) ? "an" : "a";
+}
+
+/* Testing. Reads strings from command line input */
+// strs = process.argv.slice(2);
+// strs.forEach((val, index) => {
+//   console.log(`\t${articleFor(val)} ${val}`);
+// });
